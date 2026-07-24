@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap");
+
 /* —— basic reset —— */
 * {
   box-sizing: border-box;
@@ -7,77 +9,93 @@
 
 /* —— body + fonts —— */
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #333;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: #1f1a17;
+  background: linear-gradient(135deg, #faf6f0 0%, #f4ebde 100%);
   display: flex;
   justify-content: center;
+  line-height: 1.6;
 }
 
 .page-wrapper {
   width: 90%;
-  max-width: 900px;
+  max-width: 960px;
+  padding: 24px 0 60px;
 }
 
 /* header */
 .site-header {
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 10px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 .logo {
-  width: 250px;
+  width: 230px;
   margin-bottom: 15px;
+  filter: drop-shadow(0 6px 16px rgba(26, 26, 26, 0.12));
 }
 
 .site-title {
-  font-size: 22px;
-  font-weight: 500;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 30px;
+  font-weight: 700;
   margin-bottom: 10px;
+  color: #1a1a1a;
+  letter-spacing: 0.3px;
 }
 
 /* category filter */
 .search-section {
-  margin: 30px 0;
+  margin: 28px 0;
   display: flex;
 }
 
 .search-section select {
   width: 100%;
-  padding: 16px;
-  font-size: 18px;
-  border: 2px solid #000;
-  border-radius: 8px;
+  padding: 15px 16px;
+  font-size: 16px;
+  border: 1px solid #d7c3a0;
+  border-radius: 999px;
   cursor: pointer;
-  background-color: white;
+  background-color: #fffdf9;
+  color: #1a1a1a;
   font-weight: 500;
+  box-shadow: 0 8px 24px rgba(26, 26, 26, 0.05);
 }
 
 .search-section select:focus {
   outline: none;
-  border-color: #666;
+  border-color: #c9a961;
+  box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.2);
 }
 
 /* chat section */
 .chatbox {
   margin: 40px 0;
-  border: 2px solid #000;
-  border-radius: 8px;
-  padding: 26px;
+  border: 1px solid #e6d8bc;
+  border-radius: 20px;
+  padding: 28px;
+  background: rgba(255, 252, 248, 0.8);
+  box-shadow: 0 14px 40px rgba(26, 26, 26, 0.06);
 }
 
 .chatbox h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #1a1a1a;
 }
 
 .chat-window {
-  padding: 20px;
-  font-size: 18px;
-  line-height: 1.5;
-  height: 250px;
+  padding: 18px;
+  font-size: 16px;
+  line-height: 1.6;
+  height: 270px;
   overflow-y: auto;
-  background: #fafafa;
+  background: #fcf7ef;
+  border: 1px solid #efe1c4;
+  border-radius: 16px;
   margin-bottom: 20px;
 }
 
@@ -86,8 +104,8 @@ body {
   width: 100%;
   text-align: center;
   padding: 40px;
-  color: #666;
-  font-size: 18px;
+  color: #6f6049;
+  font-size: 17px;
 }
 
 /* input row */
@@ -99,22 +117,24 @@ body {
 
 .chat-form input {
   flex: 1;
-  padding: 12px;
-  font-size: 18px;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  background: transparent;
+  padding: 13px 15px;
+  font-size: 16px;
+  border: 1px solid #e4d2a8;
+  border-radius: 999px;
+  background: #fffdf9;
+  color: #1a1a1a;
 }
 
 .chat-form input:focus {
   outline: none;
-  border-bottom-color: #000;
+  border-color: #c9a961;
+  box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.2);
 }
 
 .chat-form button {
-  font-size: 18px;
-  background: #000;
-  color: #fff;
+  font-size: 16px;
+  background: linear-gradient(135deg, #c9a961 0%, #b58d3e 100%);
+  color: #1a1a1a;
   border: none;
   padding: 12px;
   width: 48px;
@@ -123,15 +143,20 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 8px 18px rgba(201, 169, 97, 0.25);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .chat-form button:hover {
-  background: #666666;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(201, 169, 97, 0.28);
 }
 
 .chat-form button:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #c9a961;
   outline-offset: 2px;
 }
 
@@ -153,7 +178,7 @@ body {
   margin: 60px 0 40px;
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #6f6049;
 }
 
 .site-footer nav {
@@ -162,12 +187,12 @@ body {
 
 .site-footer a {
   margin: 0 8px;
-  color: #000;
+  color: #1a1a1a;
   text-decoration: none;
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #c9a961;
 }
 
 /* products grid */
@@ -180,12 +205,25 @@ body {
 
 .product-card {
   flex: 0 1 calc(33.333% - 14px);
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 4px;
+  border: 1px solid #e7d9b8;
+  padding: 16px;
+  border-radius: 18px;
   display: flex;
   gap: 15px;
-  min-height: 160px;
+  min-height: 180px;
+  background: #fffdf9;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(26, 26, 26, 0.04);
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  border-color: #c9a961;
+  box-shadow: 0 10px 24px rgba(201, 169, 97, 0.18);
 }
 
 .product-card img {
@@ -193,6 +231,9 @@ body {
   height: 110px;
   object-fit: contain;
   flex-shrink: 0;
+  border-radius: 12px;
+  background: #fff;
+  padding: 6px;
 }
 
 .product-card .product-info {
@@ -204,26 +245,32 @@ body {
 }
 
 .product-card h3 {
-  font-size: 16px;
-  margin-bottom: 8px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #1a1a1a;
 }
 
 .product-card p {
   font-size: 14px;
-  color: #666;
+  color: #6f6049;
 }
 
 /* selected products */
 .selected-products {
   margin: 40px 0;
-  padding: 20px;
-  border: 2px solid #000;
-  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid #e6d8bc;
+  border-radius: 20px;
+  background: rgba(255, 252, 248, 0.9);
+  box-shadow: 0 12px 32px rgba(26, 26, 26, 0.05);
 }
 
 .selected-products h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #1a1a1a;
 }
 
 #selectedProductsList {
@@ -232,24 +279,135 @@ body {
   gap: 10px;
 }
 
+.selected-product-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #c9a961;
+  border-radius: 999px;
+  background: #fff8eb;
+  color: #1a1a1a;
+}
+
+.remove-selected-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  color: #1a1a1a;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: #fff8eb;
+  border: 1px solid #c9a961;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.clear-btn:hover {
+  background: #f4e4b8;
+}
+
 .generate-btn {
   width: 100%;
-  margin-top: 20px;
-  padding: 16px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #fff;
-  background: #000;
+  margin-top: 12px;
+  padding: 15px 16px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #c9a961 0%, #b58d3e 100%);
   border: none;
-  border-radius: 8px;
+  border-radius: 999px;
   cursor: pointer;
-  transition: background 0.3s;
+  box-shadow: 0 10px 22px rgba(201, 169, 97, 0.25);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .generate-btn:hover {
-  background: #666;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(201, 169, 97, 0.3);
 }
 
 .generate-btn i {
   margin-right: 8px;
+}
+
+.product-card.selected {
+  border-color: #c9a961;
+  box-shadow:
+    0 0 0 2px rgba(201, 169, 97, 0.24),
+    0 12px 28px rgba(201, 169, 97, 0.2);
+}
+
+.description-toggle {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 1px solid #c9a961;
+  background: #fff8eb;
+  color: #1a1a1a;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 999px;
+}
+
+.product-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6f6049;
+}
+
+.placeholder-message.small {
+  padding: 0;
+  text-align: left;
+  font-size: 15px;
+}
+
+.chat-message {
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fffdf9;
+  border: 1px solid #efe1c4;
+}
+
+.chat-message.assistant {
+  background: #fcf2e2;
+}
+
+.chat-message.user {
+  background: #fff9ee;
+}
+
+.chat-message p {
+  margin-top: 6px;
+}
+
+.chat-message {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.chat-message.assistant {
+  background: #f2f2f2;
+}
+
+.chat-message.user {
+  background: #e8f2ff;
+}
+
+.chat-message p {
+  margin-top: 6px;
 }
